@@ -1,0 +1,445 @@
+2016-09-18 10:23:27  0    [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader:305  - Root WebApplicationContext: initialization started
+2016-09-18 10:23:27  6    [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:581  - Refreshing Root WebApplicationContext: startup date [Sun Sep 18 10:23:27 CST 2016]; root of context hierarchy
+2016-09-18 10:23:27  63   [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:207  - Registering annotated classes: [class com.nd.config.ApiSecurityConfig]
+2016-09-18 10:23:27  281  [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'bearerAuthorizationProvider' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.nd.gaea.client.WafClientConfiguration; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.gaea.client.WafClientConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.ApiSecurityConfig]
+2016-09-18 10:23:27  282  [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'wafErrorResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.nd.gaea.rest.config.WafConfiguration; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.gaea.rest.config.WafConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.ApiSecurityConfig]
+2016-09-18 10:23:30  2561 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/$waf/**'], []
+2016-09-18 10:23:30  2562 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-18 10:23:30  2562 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-18 10:23:30  2579 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.SecurityContextPersistenceFilter@4ad0815, com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter@b462a1a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b7616be, org.springframework.security.web.session.SessionManagementFilter@75160f4f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@53bc6b5a]
+2016-09-18 10:23:30  2711 [localhost-startStop-1] INFO  com.nd.gaea.rest.config.WafPropertiesListener:32  - -- listing properties --
+waf.cors.allow.origin=*
+waf.client.bearerToken.account.username=qcqh_xqx
+waf.nonce.cache.expire=5
+waf.cors.allow.headers=Origin, Accept, X-Requested-With, Con...
+waf.uc.api.refresh_token=tokens/{refresh_token}/actions/refresh
+waf.exception.remote.httpstatus.proxy=false
+waf.client.maxPerRoute=500
+waf.organization.cache.maxSize=2000
+waf.uc.cache.expire=20
+waf.client.maxTotal=1000
+waf.uc.cache.maxSize=10000
+waf.trace.enabled=false
+waf.client.connectTimeout=5000
+waf.cors.max.age=1800
+waf.macToken.cache.maxSize=10000
+waf.bearerToken.cache.maxSize=1000
+waf.macToken.cache.expire=120
+waf.organization.cache.expire=365
+waf.client.socketTimeout=60000
+waf.environment=development
+waf.uc.realm=
+waf.bearerToken.cache.expire=1440
+waf.cors.allow.methods=GET, POST, HEAD, OPTIONS, PUT, DELETE...
+waf.client.bearerToken.account.password=0bee1cf8373c885ed3110e4e871cbca3
+waf.uc.api.post_bearer_token=bearer_tokens
+waf.uc.uri=https://ucbetapi.101.com/v0.93/
+
+2016-09-18 10:23:30  2714 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader:345  - Root WebApplicationContext: initialization completed in 2711 ms
+2016-09-18 10:23:30  2755 [localhost-startStop-1] INFO  org.springframework.web.servlet.DispatcherServlet:489  - FrameworkServlet 'dispatcher': initialization started
+2016-09-18 10:23:30  2757 [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:581  - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Sun Sep 18 10:23:30 CST 2016]; parent: Root WebApplicationContext
+2016-09-18 10:23:30  2759 [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:207  - Registering annotated classes: [class com.nd.config.WebMvcConfig]
+2016-09-18 10:23:30  3130 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate:166  - Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-18 10:23:30  3285 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.nd.paper.dao.PaperRepository.
+2016-09-18 10:23:30  3289 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.nd.question.repository.QuestionRepository.
+2016-09-18 10:23:30  3356 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'wafErrorResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/config/ApiSecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafConfiguration; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafConfiguration.class]]
+2016-09-18 10:23:30  3356 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'bearerAuthorizationProvider' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/config/ApiSecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafClientConfiguration; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/client/WafClientConfiguration.class]]
+2016-09-18 10:23:30  3357 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration]
+2016-09-18 10:23:30  3359 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'visitorsSecurityInterceptor' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=visitorsSecurityInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=visitorsSecurityInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-18 10:23:30  3359 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'serverTraceInterceptor' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=serverTraceInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=serverTraceInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-18 10:23:30  3360 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'multipartResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=multipartResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=multipartResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-18 10:23:30  3360 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-18 10:23:31  3374 [localhost-startStop-1] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317  - Loading XML bean definitions from class path resource [spring/applicationContext.mongodb.xml]
+2016-09-18 10:23:31  3634 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate:166  - Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-18 10:23:31  3732 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.nd.user.dao.UserRepository.
+2016-09-18 10:23:31  3733 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.nd.course.dao.CourseRepository.
+2016-09-18 10:23:31  3734 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.nd.answer.repository.PaperAnswerRepository.
+2016-09-18 10:23:31  3735 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.nd.teacher.dao.StudentClassResponsitory.
+2016-09-18 10:23:31  3736 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.nd.teacher.dao.SchoolClassResponsitory.
+2016-09-18 10:23:31  3736 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.nd.knowledge.repository.KnowledgeRepository.
+2016-09-18 10:23:31  3814 [localhost-startStop-1] INFO  org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172  - Loading properties file from class path resource [config/jdbc.properties]
+2016-09-18 10:23:31  4026 [localhost-startStop-1] INFO  com.mchange.v2.log.MLog:80  - MLog clients using log4j logging.
+2016-09-18 10:23:31  4076 [localhost-startStop-1] INFO  com.mchange.v2.c3p0.C3P0Registry:204  - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2016-09-18 10:23:31  4156 [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:112  - Before LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{}
+2016-09-18 10:23:31  4217 [localhost-startStop-1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:334  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-18 10:23:31  4329 [localhost-startStop-1] INFO  org.hibernate.annotations.common.Version:37  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-09-18 10:23:31  4335 [localhost-startStop-1] INFO  org.hibernate.Version:41  - HHH000412: Hibernate Core {4.2.21.Final}
+2016-09-18 10:23:31  4338 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:238  - HHH000206: hibernate.properties not found
+2016-09-18 10:23:31  4340 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:345  - HHH000021: Bytecode provider name : javassist
+2016-09-18 10:23:31  4362 [localhost-startStop-1] INFO  org.hibernate.ejb.Ejb3Configuration:530  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-18 10:23:32  4509 [localhost-startStop-1] INFO  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator:188  - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2016-09-18 10:23:32  4585 [localhost-startStop-1] INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource:462  - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 10, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgff5q9jgee1yxhqw3nh|d9dfb3a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.fabric.jdbc.FabricMySQLDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgff5q9jgee1yxhqw3nh|d9dfb3a, idleConnectionTestPeriod -> 30, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql:fabric://s1.rds.sdp.nd:32271/dev_mysql_niceapi?fabricServerGroup=my_group_s1_3306&fabricUsername=admin&fabricPassword=ZB5dGGTJtsC8t7OQ&autoReconnect=true&useUnicode=true&characterEncoding=UTF8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 120, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 30, numHelperThreads -> 100, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> select 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2016-09-18 10:23:33  5398 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect:130  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-09-18 10:23:33  5407 [localhost-startStop-1] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder:120  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-09-18 10:23:33  5519 [localhost-startStop-1] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator:73  - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-09-18 10:23:33  5523 [localhost-startStop-1] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory:48  - HHH000397: Using ASTQueryTranslatorFactory
+2016-09-18 10:23:33  5563 [localhost-startStop-1] INFO  org.hibernate.validator.internal.util.Version:27  - HV000001: Hibernate Validator 5.0.1.Final
+2016-09-18 10:23:33  5839 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:207  - HHH000228: Running hbm2ddl schema update
+2016-09-18 10:23:33  5840 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:218  - HHH000102: Fetching database metadata
+2016-09-18 10:23:33  5884 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:230  - HHH000396: Updating schema
+2016-09-18 10:23:33  5923 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: dev_mysql_niceapi.t_class_student
+2016-09-18 10:23:33  5923 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [class_id, student_id]
+2016-09-18 10:23:33  5924 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2016-09-18 10:23:33  5924 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2016-09-18 10:23:33  5963 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: dev_mysql_niceapi.t_course
+2016-09-18 10:23:33  5964 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [course_name, course_id]
+2016-09-18 10:23:33  5964 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2016-09-18 10:23:33  5965 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [unique(course_name), primary]
+2016-09-18 10:23:33  5988 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: dev_mysql_niceapi.t_knowledge
+2016-09-18 10:23:33  5989 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [course, knowledge_id, knowledge_name, create_date, parent_id]
+2016-09-18 10:23:33  5989 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2016-09-18 10:23:33  5990 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2016-09-18 10:23:33  6016 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: dev_mysql_niceapi.t_paper_answer
+2016-09-18 10:23:33  6016 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [result, total_score, resource, userid, answer_time, paperid]
+2016-09-18 10:23:33  6016 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2016-09-18 10:23:33  6017 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2016-09-18 10:23:33  6041 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: dev_mysql_niceapi.t_school_class
+2016-09-18 10:23:33  6041 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [class_id, create_date, update_date, teacher_id, class_name]
+2016-09-18 10:23:33  6042 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2016-09-18 10:23:33  6042 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2016-09-18 10:23:33  6063 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: dev_mysql_niceapi.t_user
+2016-09-18 10:23:33  6063 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [nick_name, user_name, org_user_code, create_date, status, create_by, real_name, update_date, role, user_id, update_by]
+2016-09-18 10:23:33  6063 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2016-09-18 10:23:33  6064 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2016-09-18 10:23:33  6064 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:267  - HHH000232: Schema update complete
+2016-09-18 10:23:33  6104 [localhost-startStop-1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:382  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-09-18 10:23:33  6107 [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:114  - After LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, hibernate.hbm2ddl.auto=update, hibernate.show_sql=true}
+2016-09-18 10:23:34  7029 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/$waf/**'], []
+2016-09-18 10:23:34  7029 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-18 10:23:34  7029 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-18 10:23:34  7032 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.SecurityContextPersistenceFilter@5f3d9a2a, com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter@3ddd5616, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e3ede15, org.springframework.security.web.session.SessionManagementFilter@304e37fc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6efd64af]
+2016-09-18 10:23:34  7256 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/students/papers/{paper_id}/actions/answer],methods=[GET]}" onto public java.lang.Object com.nd.answer.controller.AnswerController.getAnswer(com.nd.gaea.rest.security.authens.UserInfo,java.lang.String)
+2016-09-18 10:23:34  7257 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/students/papers/{paper_id}],methods=[GET]}" onto public java.lang.Object com.nd.answer.controller.AnswerController.queryPaperAnswerResultInfo(com.nd.gaea.rest.security.authens.UserInfo,java.lang.String)
+2016-09-18 10:23:34  7257 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/students/papers/{paper_id}/actions/submit],methods=[POST]}" onto public void com.nd.answer.controller.AnswerController.submitAnswer(com.nd.gaea.rest.security.authens.UserInfo,com.nd.answer.model.QuestionAnswerReq,java.lang.String)
+2016-09-18 10:23:34  7258 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/courses],methods=[GET]}" onto public java.lang.Object com.nd.course.controller.CourseController.getAllCourse()
+2016-09-18 10:23:34  7259 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/teachers/courses/{course_id}/knowledges],methods=[GET]}" onto public java.util.List<com.nd.knowledge.model.KnowledgeResp> com.nd.knowledge.controller.KnowledgeController.getKnowledges(com.nd.gaea.rest.security.authens.UserInfo,java.lang.String)
+2016-09-18 10:23:34  7261 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/teachers/papers],methods=[GET]}" onto public com.nd.question.model.PageResp com.nd.paper.controller.PaperController.getTeachersPapers(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)
+2016-09-18 10:23:34  7262 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/students/papers],methods=[GET]}" onto public com.nd.question.model.PageResp com.nd.paper.controller.PaperController.getStudentsPapers(com.nd.gaea.rest.security.authens.UserInfo,java.lang.String,java.lang.Integer,java.lang.Integer)
+2016-09-18 10:23:34  7262 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/teachers/papers/{paper_id}],methods=[GET]}" onto public com.nd.paper.model.PaperResp com.nd.paper.controller.PaperController.getPaperDetail(java.lang.String)
+2016-09-18 10:23:34  7262 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/teachers/actions/sendPaper],methods=[POST]}" onto public void com.nd.paper.controller.PaperController.sendPaper(com.nd.gaea.rest.security.authens.UserInfo,com.nd.paper.model.PaperReq)
+2016-09-18 10:23:34  7263 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/teachers/questions/actions/upload],methods=[POST]}" onto public java.lang.Object com.nd.question.controller.QuestionController.uploadQuestions(com.nd.gaea.rest.security.authens.UserInfo,org.springframework.web.multipart.commons.CommonsMultipartFile)
+2016-09-18 10:23:34  7263 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/teachers/questions/{knowledge_id}]}" onto public com.nd.question.model.PageResp com.nd.question.controller.QuestionController.getQuestions(java.lang.String,java.lang.Integer,java.lang.Integer)
+2016-09-18 10:23:34  7264 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/students/resources/{paper_id}],methods=[GET]}" onto public java.util.Map<java.lang.String, java.util.List<com.nd.question.model.QuestionEntity>> com.nd.resource.controller.ResourceController.checkMyResources(com.nd.gaea.rest.security.authens.UserInfo,java.lang.String)
+2016-09-18 10:23:34  7264 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/teachers/papers/{paper_id}/actions/push],methods=[POST]}" onto public void com.nd.resource.controller.ResourceController.pushResource(java.lang.String,java.util.Set<java.lang.String>)
+2016-09-18 10:23:34  7266 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/teachers/detail],methods=[GET]}" onto public java.lang.Object com.nd.user.controller.UserController.getTeacherDetail(com.nd.gaea.rest.security.authens.UserInfo)
+2016-09-18 10:23:34  7266 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/students/detail],methods=[GET]}" onto public java.lang.Object com.nd.user.controller.UserController.getStudentDetail(com.nd.gaea.rest.security.authens.UserInfo)
+2016-09-18 10:23:34  7266 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/students/actions/register],methods=[POST]}" onto public java.lang.Object com.nd.user.controller.UserController.registerStudent(com.nd.gaea.rest.security.authens.UserInfo,com.nd.user.model.UserReq)
+2016-09-18 10:23:34  7268 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/$waf/{accessKey}/trace/{value}],methods=[GET]}" onto public void com.nd.gaea.rest.controller.WafController.trace(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2016-09-18 10:23:34  7268 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/$waf/{accessKey}/info],methods=[GET]}" onto public void com.nd.gaea.rest.controller.WafController.info(java.lang.String,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2016-09-18 10:23:34  7268 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/$waf/check/zipkin],methods=[GET]}" onto public void com.nd.gaea.rest.controller.WafController.checkZipkin(javax.servlet.http.HttpServletResponse) throws java.io.IOException,java.lang.InterruptedException
+2016-09-18 10:23:34  7308 [localhost-startStop-1] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:354  - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-18 10:23:34  7361 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Sun Sep 18 10:23:30 CST 2016]; parent: Root WebApplicationContext
+2016-09-18 10:23:35  7564 [localhost-startStop-1] INFO  org.springframework.web.servlet.DispatcherServlet:508  - FrameworkServlet 'dispatcher': initialization completed in 4809 ms
+2016-09-18 10:43:53  0    [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader:305  - Root WebApplicationContext: initialization started
+2016-09-18 10:43:53  6    [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:581  - Refreshing Root WebApplicationContext: startup date [Sun Sep 18 10:43:53 CST 2016]; root of context hierarchy
+2016-09-18 10:43:53  46   [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:207  - Registering annotated classes: [class com.nd.config.ApiSecurityConfig]
+2016-09-18 10:43:53  270  [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'bearerAuthorizationProvider' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.nd.gaea.client.WafClientConfiguration; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.gaea.client.WafClientConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.ApiSecurityConfig]
+2016-09-18 10:43:53  271  [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'wafErrorResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.nd.gaea.rest.config.WafConfiguration; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.gaea.rest.config.WafConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.ApiSecurityConfig]
+2016-09-18 10:43:54  1119 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/$waf/**'], []
+2016-09-18 10:43:54  1120 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-18 10:43:54  1120 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-18 10:43:54  1135 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.SecurityContextPersistenceFilter@4e8c3489, com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter@2307be96, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51717bd1, org.springframework.security.web.session.SessionManagementFilter@1cc606e9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@212b5fc7]
+2016-09-18 10:43:54  1252 [localhost-startStop-1] INFO  com.nd.gaea.rest.config.WafPropertiesListener:32  - -- listing properties --
+waf.cors.allow.origin=*
+waf.client.bearerToken.account.username=qcqh_xqx
+waf.nonce.cache.expire=5
+waf.cors.allow.headers=Origin, Accept, X-Requested-With, Con...
+waf.uc.api.refresh_token=tokens/{refresh_token}/actions/refresh
+waf.exception.remote.httpstatus.proxy=false
+waf.client.maxPerRoute=500
+waf.organization.cache.maxSize=2000
+waf.uc.cache.expire=20
+waf.client.maxTotal=1000
+waf.uc.cache.maxSize=10000
+waf.trace.enabled=false
+waf.client.connectTimeout=5000
+waf.cors.max.age=1800
+waf.macToken.cache.maxSize=10000
+waf.bearerToken.cache.maxSize=1000
+waf.macToken.cache.expire=120
+waf.organization.cache.expire=365
+waf.client.socketTimeout=60000
+waf.environment=development
+waf.uc.realm=
+waf.bearerToken.cache.expire=1440
+waf.cors.allow.methods=GET, POST, HEAD, OPTIONS, PUT, DELETE...
+waf.client.bearerToken.account.password=0bee1cf8373c885ed3110e4e871cbca3
+waf.uc.api.post_bearer_token=bearer_tokens
+waf.uc.uri=https://ucbetapi.101.com/v0.93/
+
+2016-09-18 10:43:54  1255 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader:345  - Root WebApplicationContext: initialization completed in 1252 ms
+2016-09-18 10:43:54  1286 [localhost-startStop-1] INFO  org.springframework.web.servlet.DispatcherServlet:489  - FrameworkServlet 'dispatcher': initialization started
+2016-09-18 10:43:54  1288 [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:581  - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Sun Sep 18 10:43:54 CST 2016]; parent: Root WebApplicationContext
+2016-09-18 10:43:54  1290 [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:207  - Registering annotated classes: [class com.nd.config.WebMvcConfig]
+2016-09-18 10:43:55  1628 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate:166  - Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-18 10:43:55  1762 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.nd.paper.dao.PaperRepository.
+2016-09-18 10:43:55  1764 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.nd.question.repository.QuestionRepository.
+2016-09-18 10:43:55  1824 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'wafErrorResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/config/ApiSecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafConfiguration; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafConfiguration.class]]
+2016-09-18 10:43:55  1824 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'bearerAuthorizationProvider' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/config/ApiSecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafClientConfiguration; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/client/WafClientConfiguration.class]]
+2016-09-18 10:43:55  1825 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration]
+2016-09-18 10:43:55  1828 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'visitorsSecurityInterceptor' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=visitorsSecurityInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=visitorsSecurityInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-18 10:43:55  1828 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'serverTraceInterceptor' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=serverTraceInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=serverTraceInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-18 10:43:55  1828 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-18 10:43:55  1829 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'multipartResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=multipartResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=multipartResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-18 10:43:55  1836 [localhost-startStop-1] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317  - Loading XML bean definitions from class path resource [spring/applicationContext.mongodb.xml]
+2016-09-18 10:43:55  1975 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate:166  - Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-18 10:43:55  2072 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.nd.user.dao.UserRepository.
+2016-09-18 10:43:55  2074 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.nd.course.dao.CourseRepository.
+2016-09-18 10:43:55  2075 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.nd.answer.repository.PaperAnswerRepository.
+2016-09-18 10:43:55  2076 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.nd.teacher.dao.StudentClassResponsitory.
+2016-09-18 10:43:55  2077 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.nd.teacher.dao.SchoolClassResponsitory.
+2016-09-18 10:43:55  2077 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.nd.knowledge.repository.KnowledgeRepository.
+2016-09-18 10:43:55  2147 [localhost-startStop-1] INFO  org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172  - Loading properties file from class path resource [config/jdbc.properties]
+2016-09-18 10:43:55  2345 [localhost-startStop-1] INFO  com.mchange.v2.log.MLog:80  - MLog clients using log4j logging.
+2016-09-18 10:43:55  2377 [localhost-startStop-1] INFO  com.mchange.v2.c3p0.C3P0Registry:204  - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2016-09-18 10:43:55  2445 [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:112  - Before LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{}
+2016-09-18 10:43:55  2503 [localhost-startStop-1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:334  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-18 10:43:56  2614 [localhost-startStop-1] INFO  org.hibernate.annotations.common.Version:37  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-09-18 10:43:56  2622 [localhost-startStop-1] INFO  org.hibernate.Version:41  - HHH000412: Hibernate Core {4.2.21.Final}
+2016-09-18 10:43:56  2625 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:238  - HHH000206: hibernate.properties not found
+2016-09-18 10:43:56  2627 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:345  - HHH000021: Bytecode provider name : javassist
+2016-09-18 10:43:56  2648 [localhost-startStop-1] INFO  org.hibernate.ejb.Ejb3Configuration:530  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-18 10:43:56  2756 [localhost-startStop-1] INFO  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator:188  - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2016-09-18 10:43:56  2823 [localhost-startStop-1] INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource:462  - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 10, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgff5q9jgf4aho1ysg6cg|619424f4, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.fabric.jdbc.FabricMySQLDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgff5q9jgf4aho1ysg6cg|619424f4, idleConnectionTestPeriod -> 30, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql:fabric://s1.rds.sdp.nd:32271/dev_mysql_niceapi?fabricServerGroup=my_group_s1_3306&fabricUsername=admin&fabricPassword=ZB5dGGTJtsC8t7OQ&autoReconnect=true&useUnicode=true&characterEncoding=UTF8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 120, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 30, numHelperThreads -> 100, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> select 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2016-09-18 10:43:56  3116 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect:130  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-09-18 10:43:56  3125 [localhost-startStop-1] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder:120  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-09-18 10:43:56  3236 [localhost-startStop-1] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator:73  - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-09-18 10:43:56  3240 [localhost-startStop-1] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory:48  - HHH000397: Using ASTQueryTranslatorFactory
+2016-09-18 10:43:56  3281 [localhost-startStop-1] INFO  org.hibernate.validator.internal.util.Version:27  - HV000001: Hibernate Validator 5.0.1.Final
+2016-09-18 10:43:56  3544 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:207  - HHH000228: Running hbm2ddl schema update
+2016-09-18 10:43:56  3544 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:218  - HHH000102: Fetching database metadata
+2016-09-18 10:43:56  3552 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:230  - HHH000396: Updating schema
+2016-09-18 10:43:57  3583 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: dev_mysql_niceapi.t_class_student
+2016-09-18 10:43:57  3584 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [class_id, student_id]
+2016-09-18 10:43:57  3584 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2016-09-18 10:43:57  3584 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2016-09-18 10:43:57  3617 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: dev_mysql_niceapi.t_course
+2016-09-18 10:43:57  3618 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [course_name, course_id]
+2016-09-18 10:43:57  3618 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2016-09-18 10:43:57  3618 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [unique(course_name), primary]
+2016-09-18 10:43:57  3637 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: dev_mysql_niceapi.t_knowledge
+2016-09-18 10:43:57  3638 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [course, knowledge_id, knowledge_name, create_date, parent_id]
+2016-09-18 10:43:57  3638 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2016-09-18 10:43:57  3638 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2016-09-18 10:43:57  3656 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: dev_mysql_niceapi.t_paper_answer
+2016-09-18 10:43:57  3656 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [result, total_score, resource, userid, answer_time, paperid]
+2016-09-18 10:43:57  3656 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2016-09-18 10:43:57  3656 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2016-09-18 10:43:57  3673 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: dev_mysql_niceapi.t_school_class
+2016-09-18 10:43:57  3674 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [class_id, create_date, update_date, teacher_id, class_name]
+2016-09-18 10:43:57  3674 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2016-09-18 10:43:57  3674 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2016-09-18 10:43:57  3699 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: dev_mysql_niceapi.t_user
+2016-09-18 10:43:57  3700 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [nick_name, user_name, org_user_code, create_date, status, create_by, real_name, update_date, role, user_id, update_by]
+2016-09-18 10:43:57  3701 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2016-09-18 10:43:57  3701 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2016-09-18 10:43:57  3702 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:267  - HHH000232: Schema update complete
+2016-09-18 10:43:57  3743 [localhost-startStop-1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:382  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-09-18 10:43:57  3745 [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:114  - After LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, hibernate.hbm2ddl.auto=update, hibernate.show_sql=true}
+2016-09-18 10:43:57  4563 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/$waf/**'], []
+2016-09-18 10:43:57  4563 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-18 10:43:57  4563 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-18 10:43:58  4566 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.SecurityContextPersistenceFilter@71b98f5c, com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter@2049cb86, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4cd0daf9, org.springframework.security.web.session.SessionManagementFilter@18973f40, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e7725aa]
+2016-09-18 10:43:58  4774 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/students/papers/{paper_id}],methods=[GET]}" onto public java.lang.Object com.nd.answer.controller.AnswerController.queryPaperAnswerResultInfo(com.nd.gaea.rest.security.authens.UserInfo,java.lang.String)
+2016-09-18 10:43:58  4775 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/students/papers/{paper_id}/actions/answer],methods=[GET]}" onto public java.lang.Object com.nd.answer.controller.AnswerController.getAnswer(com.nd.gaea.rest.security.authens.UserInfo,java.lang.String)
+2016-09-18 10:43:58  4775 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/students/papers/{paper_id}/actions/submit],methods=[POST]}" onto public void com.nd.answer.controller.AnswerController.submitAnswer(com.nd.gaea.rest.security.authens.UserInfo,com.nd.answer.model.QuestionAnswerReq,java.lang.String)
+2016-09-18 10:43:58  4776 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/courses],methods=[GET]}" onto public java.lang.Object com.nd.course.controller.CourseController.getAllCourse()
+2016-09-18 10:43:58  4777 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/teachers/courses/{course_id}/knowledges],methods=[GET]}" onto public java.util.List<com.nd.knowledge.model.KnowledgeResp> com.nd.knowledge.controller.KnowledgeController.getKnowledges(com.nd.gaea.rest.security.authens.UserInfo,java.lang.String)
+2016-09-18 10:43:58  4778 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/teachers/papers],methods=[GET]}" onto public com.nd.question.model.PageResp com.nd.paper.controller.PaperController.getTeachersPapers(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)
+2016-09-18 10:43:58  4778 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/students/papers],methods=[GET]}" onto public com.nd.question.model.PageResp com.nd.paper.controller.PaperController.getStudentsPapers(com.nd.gaea.rest.security.authens.UserInfo,java.lang.String,java.lang.Integer,java.lang.Integer)
+2016-09-18 10:43:58  4778 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/teachers/papers/{paper_id}],methods=[GET]}" onto public com.nd.paper.model.PaperResp com.nd.paper.controller.PaperController.getPaperDetail(java.lang.String)
+2016-09-18 10:43:58  4779 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/teachers/actions/sendPaper],methods=[POST]}" onto public void com.nd.paper.controller.PaperController.sendPaper(com.nd.gaea.rest.security.authens.UserInfo,com.nd.paper.model.PaperReq)
+2016-09-18 10:43:58  4779 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/teachers/questions/actions/upload],methods=[POST]}" onto public java.lang.Object com.nd.question.controller.QuestionController.uploadQuestions(com.nd.gaea.rest.security.authens.UserInfo,org.springframework.web.multipart.commons.CommonsMultipartFile)
+2016-09-18 10:43:58  4779 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/teachers/questions/{knowledge_id}]}" onto public com.nd.question.model.PageResp com.nd.question.controller.QuestionController.getQuestions(java.lang.String,java.lang.Integer,java.lang.Integer)
+2016-09-18 10:43:58  4780 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/students/resources/{paper_id}],methods=[GET]}" onto public java.util.Map<java.lang.String, java.util.List<com.nd.question.model.QuestionEntity>> com.nd.resource.controller.ResourceController.checkMyResources(com.nd.gaea.rest.security.authens.UserInfo,java.lang.String)
+2016-09-18 10:43:58  4780 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/teachers/papers/{paper_id}/actions/push],methods=[POST]}" onto public void com.nd.resource.controller.ResourceController.pushResource(java.lang.String,java.util.Set<java.lang.String>)
+2016-09-18 10:43:58  4782 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/teachers/detail],methods=[GET]}" onto public java.lang.Object com.nd.user.controller.UserController.getTeacherDetail(com.nd.gaea.rest.security.authens.UserInfo)
+2016-09-18 10:43:58  4782 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/students/detail],methods=[GET]}" onto public java.lang.Object com.nd.user.controller.UserController.getStudentDetail(com.nd.gaea.rest.security.authens.UserInfo)
+2016-09-18 10:43:58  4782 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/v1/students/actions/register],methods=[POST]}" onto public java.lang.Object com.nd.user.controller.UserController.registerStudent(com.nd.gaea.rest.security.authens.UserInfo,com.nd.user.model.UserReq)
+2016-09-18 10:43:58  4783 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/$waf/{accessKey}/trace/{value}],methods=[GET]}" onto public void com.nd.gaea.rest.controller.WafController.trace(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2016-09-18 10:43:58  4783 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/$waf/{accessKey}/info],methods=[GET]}" onto public void com.nd.gaea.rest.controller.WafController.info(java.lang.String,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2016-09-18 10:43:58  4783 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/$waf/check/zipkin],methods=[GET]}" onto public void com.nd.gaea.rest.controller.WafController.checkZipkin(javax.servlet.http.HttpServletResponse) throws java.io.IOException,java.lang.InterruptedException
+2016-09-18 10:43:58  4820 [localhost-startStop-1] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:354  - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-18 10:43:58  4874 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Sun Sep 18 10:43:54 CST 2016]; parent: Root WebApplicationContext
+2016-09-18 10:43:58  5068 [localhost-startStop-1] INFO  org.springframework.web.servlet.DispatcherServlet:508  - FrameworkServlet 'dispatcher': initialization completed in 3781 ms
+2016-09-18 10:44:28  34601 [http-bio-80-exec-1] ERROR com.nd.gaea.rest.exceptions.WafRestErrorResolver:57  - 试卷不存在
+com.nd.common.exception.NiceException: 试卷不存在
+	at com.nd.answer.service.impl.PaperAnswerServiceImpl.respPaperAnswer2User(PaperAnswerServiceImpl.java:74)
+	at com.nd.answer.controller.AnswerController.getAnswer(AnswerController.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter.doFilterInternal(TokenAuthenticationProcessFilter.java:86)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafHttpMethodOverrideFilter.doFilterInternal(WafHttpMethodOverrideFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafCorsFilter.doFilterInternal(WafCorsFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.ExceptionFilter.doFilterInternal(ExceptionFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2016-09-18 10:45:52  118874 [http-bio-80-exec-4] ERROR com.nd.gaea.rest.exceptions.WafRestErrorResolver:57  - Debug token property userid is missing.
+java.lang.IllegalArgumentException: Debug token property userid is missing.
+	at org.springframework.util.Assert.hasText(Assert.java:168)
+	at com.nd.gaea.rest.security.authentication.debug.PreAuthenticatedDebugTokenAuthenticationExtractor.extractAuthentication(PreAuthenticatedDebugTokenAuthenticationExtractor.java:49)
+	at com.nd.gaea.rest.security.authentication.PreAuthenticatedAuthenticationExtractorManager.extractAuthentication(PreAuthenticatedAuthenticationExtractorManager.java:46)
+	at com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter.doFilterInternal(TokenAuthenticationProcessFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafHttpMethodOverrideFilter.doFilterInternal(WafHttpMethodOverrideFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafCorsFilter.doFilterInternal(WafCorsFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.ExceptionFilter.doFilterInternal(ExceptionFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2016-09-18 10:46:35  162497 [http-bio-80-exec-5] ERROR com.nd.gaea.rest.exceptions.WafRestErrorResolver:57  - Debug token property userid is missing.
+java.lang.IllegalArgumentException: Debug token property userid is missing.
+	at org.springframework.util.Assert.hasText(Assert.java:168)
+	at com.nd.gaea.rest.security.authentication.debug.PreAuthenticatedDebugTokenAuthenticationExtractor.extractAuthentication(PreAuthenticatedDebugTokenAuthenticationExtractor.java:49)
+	at com.nd.gaea.rest.security.authentication.PreAuthenticatedAuthenticationExtractorManager.extractAuthentication(PreAuthenticatedAuthenticationExtractorManager.java:46)
+	at com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter.doFilterInternal(TokenAuthenticationProcessFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafHttpMethodOverrideFilter.doFilterInternal(WafHttpMethodOverrideFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafCorsFilter.doFilterInternal(WafCorsFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.ExceptionFilter.doFilterInternal(ExceptionFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
